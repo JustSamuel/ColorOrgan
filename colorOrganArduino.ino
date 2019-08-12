@@ -3,6 +3,7 @@
 const int pwmR = 10;
 const int pwmG = 6;
 const int pwmB = 9;
+
 int red = 0;
 int green = 0;
 int blue = 0;
@@ -16,9 +17,6 @@ void setup() {
 }
 
 void loop() {
-  analogWrite(pwmR, 0);
-  analogWrite(pwmG, 0);
-  analogWrite(pwmB, 0);
   while (Serial.available() > 0){
     Serial.end();      // close serial port
     Serial.begin(9600); // reenable serial again
